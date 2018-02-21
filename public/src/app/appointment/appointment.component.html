@@ -1,0 +1,37 @@
+<br><br>
+<h2 class="text-right lineheight">Appointment Application</h2>
+<hr>
+
+	<div class="col-xs-3">
+		<div class="padding">
+			<app-navbar></app-navbar>
+		</div>
+		<div class="padding">
+			<app-appnotes></app-appnotes>
+		</div>
+	</div>
+	<div class="col-xs-6">
+		<app-actionbar></app-actionbar>
+		<div *ngIf='!navSection'>
+			<app-login></app-login>
+		</div>
+		<div *ngIf="navSection == 'dashboard'">
+			<app-dashboard></app-dashboard>
+		</div>
+		<div *ngIf="navSection == 'add' || navSection == 'edit'">
+			<app-add></app-add>
+		</div>
+		<div *ngIf="navSection == 'delete'">
+			<app-delete></app-delete>
+		</div>
+		<div *ngIf="navSection == 'logout'">
+			<app-logout></app-logout>
+		</div>
+	</div>
+	<div class="col-xs-3">
+		<div class="padding">
+			<app-sidenote></app-sidenote>
+		</div>
+	</div>
+
+

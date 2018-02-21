@@ -1,0 +1,56 @@
+<p><br><br></p>
+<!-- these are all templates for each individual page -->
+<div class="col-xs-3 align-middle text-center"><br><br>
+	<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">Documentation</button>
+	<button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">Wireframe</button>
+
+</div>
+<div class="col-xs-9">
+	<div class="align-top text-center text-uppercase">
+		<h3>Questions and Answers</h3>
+	</div>
+	<div *ngIf="navSection && navSection!='register'">
+		<app-questionsnavbar [navsection]="navSection"></app-questionsnavbar><br>
+	</div>
+	<div *ngIf='navSection == "login" || !navSection'>
+		<app-userlogin></app-userlogin>
+	</div>
+	<div *ngIf='navSection == "register"'>
+		<app-register></app-register>
+	</div>
+	<div *ngIf='navSection == "main"'>
+		<app-main></app-main>
+	</div>
+	<div *ngIf='navSection == "view"'>
+		<app-view></app-view>
+	</div>
+	<div *ngIf='navSection == "user"'>
+		<app-user></app-user>
+	</div>
+	<div *ngIf='navSection == "profile"'>
+		<app-profile></app-profile>
+	</div>
+	<div *ngIf='navSection == "test"'>
+		<app-test></app-test>
+	</div>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Under Construction</h4>
+			</div>
+			<div class="modal-body">
+				<p>Sorry!  These areas are still under construction.  Check back at a later date.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3>{{title}}Appointment</h3></div>
+	<div class="panel-body">
+		<div class="errorMessage"><label class="text-danger text-center" *ngIf="errMessage">{{ errMessage }}</label>&nbsp;</div>
+		<form (submit)="onSubmit()" #formData='ngForm'>
+		<div class="form-group"> 
+			<label class="labelwidth">Patient Name: </label> &nbsp;<label class="text-left nameLabel">{{ appointment.name}}</label>
+			<input #patientName='ngModel' type="hidden" name="patientName" [(ngModel)]='appointment.name'>
+			<br>
+			<label class="labelwidth">Appointment Date: </label> &nbsp;<input #appointdate='ngModel' type="date" required name="appointmentdate" [(ngModel)]='appointment.apptdate' (change)="checkDate()" class="form-control"><br>
+			<label class="labelwidth">Appointment Time: </label>&nbsp;
+				<select name="appointmenttime" [(ngModel)]='appointment.appttime' required #appointtime='ngModel' class="form-control selectwidth">
+					<option value="8:00 AM">8:00 AM</option>
+					<option value="9:00 AM">9:00 AM</option>
+					<option value="10:00 AM">10:00 AM</option>
+					<option value="11:00 AM">11:00 AM</option>
+					<option value="12:00 PM">12:00 PM</option>
+					<option value="1:00 PM">1:00 PM</option>
+					<option value="2:00 PM">2:00 PM</option>
+					<option value="3:00 PM">3:00 PM</option>
+					<option value="4:00 PM">4:00 PM</option>
+					<option value="5:00 PM">5:00 PM</option>
+				</select><br>
+			<label class="labelwidth">Complaint: </label> &nbsp;<textarea name="complaint" [(ngModel)]="appointment.complaint" #complainttext='ngModel' required minlength='10' class="form-control textareaformat" rows="3"></textarea>
+			<label class="labelwidth"></label><div class="submitbutton"><input type='submit' value="Add Appointment"></div>
+		</div>
+		</form>
+	</div>
+</div>

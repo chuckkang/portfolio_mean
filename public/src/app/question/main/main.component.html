@@ -1,0 +1,50 @@
+<form (submit)="onSubmit()">
+<div *ngIf="confirmationmessage" class="text-danger"><h3>{{confirmationmessage}}</h3></div>
+<div class="panel-header bg-primary border border-success">
+	<label class="container">
+		<p class="text text-uppercase text-center">Post A New Question:</p>
+	</label>
+</div>
+<div class="panel-body border border-success">
+	<input type="text" class="cellpad inputsize" name="newquestion" [(ngModel)]="newquestion.question">
+	<button type="submit" class="btn btn-primary">Submit Question</button>
+</div>
+
+<br>
+<div *ngFor="let question of allquestions; let i = index">
+	<div class="col panel panel-default">
+		<div class="panel-header">
+			<h2>
+				<p class="text-left font-weight-bold ">
+					<a [routerLink]="['/questions', 'view', question._id]">{{ question.question}}</a>
+				</p>
+			</h2>
+			<div>
+				<div class="col-xs-3 text-left">
+					<p>By:
+						<a [routerLink]="['/questions', 'user', question.userId._id]">{{question.userId.firstname}} {{question.userId.lastname}}</a>
+					</p>
+				</div>
+				<div class="col-xs-7 text-center">
+					<p>Posted: {{question.createdAt | date:'medium'}}</p>
+				</div>
+				<div class="col-xs-2 text-right">
+					<a class="glyphicon glyphicon-remove-sign fa-lg" *ngIf='currentUser.id==question.userId._id' (click)="deleteQuestion(question._id)">Delete</a>
+				</div>
+				<label *ngIf="question.errMessage" class="text-danger">{{question.errMessage}}</label>
+				<div class="col-xs-12 input-group input-group">
+					<input type="text" class="form-control" name="answer" [(ngModel)]='question.newanswer'>
+					<div class="input-group-btn">
+						<input type="hidden" name="answer" value="question.id">
+						<button class="btn btn-primary" type="button" (click)="submitAnswer(question._id)">
+							Answer
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</form>
+
+

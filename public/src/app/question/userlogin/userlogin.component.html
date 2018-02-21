@@ -1,0 +1,28 @@
+<form name="formData" #formData='ngForm' (submit)='onSubmit()'>
+	<div class="text text-center pad">
+		<div class="panel rounded border border-primary">
+			<div class="panel-heading bg-primary text-center text-uppercase">Questions & Answers - Login</div>
+			<div class="panel-body">
+				<div *ngIf='errMessage'><span class="text-danger">{{ errMessage }}</span></div>
+				<input type="text" class="input form-control" name="email" required [(ngModel)]='email' placeholder="Email Address">
+				<input type="text" class="input form-control" name="password" required [(ngModel)]='password' placeholder="Password">
+				<button class="input btn btn-info col-12">Login</button>
+				<button class="input btn btn-info col-12" (click)="register()">Register</button>
+			</div>
+			<div class="panel-footer align-top">
+				<div class="instructions align-middle">
+					<p class="register()">Register A New Account</p>(You are not required to submit accurate data as this is only a test site.)
+				</div>
+				<div class="middle">
+					<h2>Or</h2>
+				</div>
+				<div class="instructions">
+					<p>Login using the following credentials:
+						<br>
+						<b>email:</b> chuck@chuck.com<br>
+						<b>password:</b> guest</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

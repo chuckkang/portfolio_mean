@@ -1,0 +1,15 @@
+
+	<div class="rowinline">
+		<div class="text-left" *ngIf="navsection!='main'">
+			<a [routerLink]="['/questions', 'main']">
+				<button class="btn-primary">Back</button>
+			</a>
+		</div>
+	</div>
+
+	<div class="rowinline">
+		<div class="text-right">
+			<a [routerLink]="['/questions', 'profile']"><button class="btn-primary">Profile</button></a>
+			<a [routerLink]="['/questions']"><button class="btn-primary" (click)="logout()">Logout</button></a>
+		</div>
+	</div>

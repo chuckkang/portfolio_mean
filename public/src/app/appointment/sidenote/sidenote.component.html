@@ -1,0 +1,39 @@
+
+<div *ngIf='!navSection'>
+	<div class="well well-sm">
+		<p class="text-center">Appointment App</p> Appointment application will allow a user to login and manage appointments.</div>
+		<div class="well well-sm">
+			<p class="text-center">Tech Notes</p> App coded in Angular 4, bootstrap, javascript and HTML. The app accesses a Mongo database </div>
+</div>
+<div *ngIf="navSection == 'dashboard'">
+	<div class="well well-sm align-top">
+		<p class="text-center text-sm">Funtional Notes</p> Only logged in user has ability to manage their own appointments.</div>
+	<div class="well well-sm">
+		<p class="text-center">Tech Notes</p> App coded in Angular 4, bootstrap, Javascript, HTML, CSS.  Implements MongoDB. Angular uses a front-end service to make calls to an Node.js API.  Node then returns a JSON object.</div>
+	<div class="well well-sm">
+		<p class="text-center">To Do Notes</p> Create admin account.  Allow admin to manage all records. </div>
+</div>
+<div *ngIf="navSection == 'add' || navSection == 'edit'">
+		<div class="well well-sm">
+			<p class="text-center">Appointment App</p> User may view all appointments. However, he/she may only be able to edit and add their own.</div>
+		<div class="well well-sm">
+			<p class="text-center">Tech Notes</p> App coded in Angular 4, bootstrap, javascript and HTML. The app accesses a Mongo database </div>
+		<div class="well well-sm">
+			<p class="text-center">Functional Notes</p>Validations include no more than 3 appointments per day, date must be after today, all fields are required and textarea must have 10 or more characters.</div>
+</div>
+<div *ngIf="navSection == 'delete'">
+		<div class="well well-sm">
+			<p class="text-center">Appointment App</p> User may view all appointments. However, he/she may only be able to edit and add their own.</div>
+		<div class="well well-sm">
+			<p class="text-center">Tech Notes</p> App coded in Angular 4, bootstrap, javascript and HTML. The app accesses a Mongo database </div>
+		<div class="well well-sm">
+			<p class="text-center">To Do Notes</p> Create admin account. Allow admin to manage all records. </div>
+</div>
+<div *ngIf="navSection == 'logout'">
+		<div class="well well-sm">
+			<p class="text-center">Appointment App</p> User may view all appointments. However, he/she may only be able to edit and add their own.</div>
+		<div class="well well-sm">
+			<p class="text-center">Tech Notes</p> App coded in Angular 4, bootstrap, javascript and HTML. The app accesses a Mongo database </div>
+		<div class="well well-sm">
+			<p class="text-center">To Do Notes</p> Create admin account. Allow admin to manage all records. </div>
+</div>

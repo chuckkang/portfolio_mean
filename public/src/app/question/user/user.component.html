@@ -1,0 +1,19 @@
+
+<div class="panel panel-primary">
+	<div class="panel-header bg-primary">
+		<label class="container text-uppercase text-center">
+
+			<h3>{{userprofile.getFullName()}}</h3>
+		</label>
+	</div>
+	<div class="panel-body">
+		<h4 class="">
+			<strong>Email:</strong> {{ userprofile.email || "N/A"}}</h4>
+		<h4 class="">
+			<strong>Joined:</strong> {{ userprofile.createdAt | date: 'mediumDate' }}</h4>
+		<h4 class="">
+			<strong>Favorite Quote:</strong> {{userprofile.favoritequote || "N/A" }}</h4>
+		<h4 class="">
+			<strong>Total Posts:</strong> {{ userprofile.totalposts || "N/A" }}</h4>
+	</div>
+</div>

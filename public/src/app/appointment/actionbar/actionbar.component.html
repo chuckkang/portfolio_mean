@@ -1,0 +1,32 @@
+
+
+
+
+
+<div *ngIf='!navSection'>
+
+</div>
+<div class="text-left">
+	<div *ngIf="navSection == 'dashboard'">
+	<p>
+		<a [routerLink]="['/appointment/dashboard']" href="" class="btn btn-primary active">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+		<a [routerLink]="['/appointment/add']" href="" class="btn btn-primary">
+			<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ADD NEW</a>
+		<a [routerLink]="['/appointment/logout']" href="" class="text-right btn btn-primary">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span> LOGOUT</a>
+	</p>
+
+	</div>
+	<div *ngIf="navSection == 'add' || navSection == 'edit'">
+		<p>
+			<a [routerLink]="['/appointment/dashboard']" href="" class="btn btn-primary">
+				<span class="glyphicon glyphicon-home" aria-hidden="true"></span> HOME</a>
+		</p>
+	</div>
+	<div *ngIf="navSection == 'delete'">
+	</div>
+	<div *ngIf="navSection == 'logout'">
+	</div>
+	
+</div>

@@ -1,0 +1,40 @@
+<div class="panel panel-primary">
+	<div class="panel-header bg-primary">
+		<label class="container text-uppercase text-center">
+
+			<h3>Edit Your Profile</h3>
+		</label>
+	</div>
+	<form #validateForm="ngForm" (submit)="onSubmit()">
+		<div class="panel-body">
+			
+			<div class="form-group">
+				<p>
+					<label *ngIf="errMessage" class="text-danger text-center">{{errMessage}}</label>
+				</p>
+				<label for="firstname">First Name:</label>
+				<label *ngIf="!firstname.valid" class="text-danger">Please enter more than 2 characters for your first name.</label>
+				<input type="text" class="form-control" name="firstname" [(ngModel)]='currentUser.firstname' required minlength="2" #firstname="ngModel">
+			</div>
+			<div class="form-group">
+				<label for="usr">Last Name:</label><label *ngIf="!lastname.valid" class="text-danger">Please enter more than 2 characters for your last name.</label>
+				<input type="text" class="form-control" name="lastname" [(ngModel)]='currentUser.lastname' required minlength="2" #lastname="ngModel">
+			</div>
+			<div class="form-group">
+				<label for="usr">Email Address:</label><label *ngIf="!email.valid" class="text-danger">Please enter more than 5 characters for your email address.</label>
+				<input type="text" class="form-control" name="email" [(ngModel)]='currentUser.email' required minlength="3" #email="ngModel">
+			</div>
+			<div class="form-group">
+				<label for="usr">Favorite Quote:</label>
+				<input type="text" class="form-control" name="favoritequote" [(ngModel)]='currentUser.favoritequote'>
+			</div>
+			<div class="form-group">
+				<label for="usr">Date Of Birth:</label>
+				<input type="text" class="form-control" name="dateofbirth" [(ngModel)]='currentUser.dateofbirth'>
+			</div>
+		</div>
+		<div class="panel-footer">
+			<button class="btn btn-primary btn-block" [disabled]="!validateForm.valid">Save Changes</button>
+		</div>
+	</form>
+</div>

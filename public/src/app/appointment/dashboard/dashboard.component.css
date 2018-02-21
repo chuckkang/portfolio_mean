@@ -1,0 +1,25 @@
+.bg-primary {
+	padding: 0px 0px 0px 0px;
+}
+
+.header-height {
+	line-height: 75px;
+	margin: 0px 0px 0px 0px;
+	padding: 1px 0px 0px 8px;
+}
+
+.table-condensed{
+  font-size: 12px;
+}
+
+.panel-body {
+	margin: none;
+	padding: 0px;
+}
+
+th {
+	text-align: center;
+}
+.buttonColumn {
+	width: 16%;
+}

@@ -1,0 +1,76 @@
+#wrapper {
+	height: 800px;
+	background-color: green;
+}
+
+.img-back{
+	background-image: url("/assets/images/Header_Programming.jpg");
+	/* background-image: url("/assets/images/jumbotronCode.png"); */
+	/* background-size: auto; */
+	background-size: 100% 100%;
+	min-width: 1000px;
+	opacity: 1;
+	background-repeat: no-repeat;
+	display: block;
+	color: white;
+}
+
+.fontadjust{
+		color: white;
+		font-weight: bolder;
+		opacity: 1;
+}
+
+.imglogos {
+	
+	max-width: 60px;
+	max-height: 60px;
+	padding: 5px; 
+}
+
+.stacklogo {
+	width: auto;
+	height: auto;
+	max-width: 175px;
+	max-height: 100px;
+	padding: 5px; 
+	vertical-align: top;
+}
+
+.iosstacklogo {
+	width: auto;
+	height: auto;
+	max-width: 200px;
+	max-height: 75px;
+	padding: 5px; 
+}
+
+.portfoliosections{
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	min-height: 300px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+.portfoliolinks{
+	width: 20px;
+	height: 20px;
+	text-align: left;
+}
+
+.text-left {
+	padding: 0px 0px 0px 5px;
+}
+
+.techsection{
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 10px;
+	display: inline-block;
+	/* padding: 20px; */
+	margin: 0px 0px 5px 0px;
+	min-height: 200px;
+}

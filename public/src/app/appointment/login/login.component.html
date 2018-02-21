@@ -1,0 +1,13 @@
+
+<div class="panel rounded">
+		<div class="panel-heading text-center text-uppercase">	Appointment Application </div>
+		<div class="panel-body" >
+			<span class="text-center text-muted">Please enter a username</span>
+			<form name="formData" #formData='ngForm' (submit)='onSubmit()'>
+				<span class="text-center text-muted">Username: </span> <input type="text" class="form-control" name="username"  id="usr" required minlength='2' [(ngModel)]='username'>
+				<input type="submit" class="btn" ng-disabled="false" *ngIf="formData.valid">
+				<span *ngIf="!username.valid" class="text-warning">Please enter more than 2 characters.</span>
+			</form>
+		</div>
+	</div>
+<!-- <h3 style="height:10px;padding:0">Appointment Application</h3> -->

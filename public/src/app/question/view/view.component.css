@@ -1,0 +1,19 @@
+.bg-gradient{
+	background: linear-gradient(180deg, rgba(217,217,217,1) 0%, rgba(217,217,217,1) 0%, rgba(26,26,26,0.05) 88%, rgba(0,0,0,0.05) 100%); /* w3c */
+
+	border-radius: 8px;
+}
+
+.bg-white{
+	background-color: white;
+	border-radius: 8px;
+	border: 2px solid black;
+	margin: 15px 0px 0px 0px;
+	/* vertical-align: top; */
+	
+}
+
+.clear {
+	/* border: 2px solid black; */
+	padding: 0px 15px 0px 15px;
+}

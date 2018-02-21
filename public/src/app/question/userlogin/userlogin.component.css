@@ -1,0 +1,15 @@
+.instructions{
+	display: inline-block;
+	width: 40%;
+	border: 1px #3C4C5B;
+	vertical-align: top;
+	text-align: top;
+	border-radius: 7px;
+	background: linear-gradient(180deg, rgba(217,217,217,1) 0%, rgba(217,217,217,1) 0%, rgba(26,26,26,0.05) 88%, rgba(0,0,0,0.05) 100%); /* w3c */
+}
+
+.middle{
+	display: inline-block;
+	width: 15%;
+	/* border: 2px solid black; */
+}

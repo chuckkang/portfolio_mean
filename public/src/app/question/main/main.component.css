@@ -1,0 +1,17 @@
+.border {
+	border: 1px solid black;
+}
+.cellpad {
+	/* padding: 25px 0px 0px 0px; */
+	margin: 5px 0px 0px 0px;
+}
+.inputsize {
+	width: 75%;
+}
+.inputpad {
+	/* padding: 25px 0px 0px 0px; */
+	margin: 15px 0px 0px 0px;
+}
+.bgcolor {
+	background: linear-gradient(359deg, rgba(51,122,183,0.1) 0%, rgba(54,126,183,0.1) 9%, rgba(61,134,183,0.1) 28%, rgba(68,143,184,0.31) 45%, rgba(68,143,184,1) 100%);
+}

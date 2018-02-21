@@ -1,0 +1,24 @@
+{
+  "name": "wealth-calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.158.0",
+    "bcrypt-as-promised": "^1.1.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^4.12.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@angular/cli": "^1.5.2"
+  }
+}
