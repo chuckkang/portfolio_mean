@@ -19,15 +19,6 @@ app.use(session({
 //static content
 app.use(express.static(path.join(__dirname, "/public/dist")));
 
-// for aws ses
-// aws.config.loadFromPath(__dirname + '/config.json'); 
-// var ses = new aws.SES();
-//setup views folder
-// app.set('views', path.join(__dirname, './client/views'));
-// app.set('view engine', 'ejs');
-// require the mongoose configuration file which does the rest for us
-// require('./server/config/questionsdb.js');
-
 require('./server/config/mongoose.js');
 // require('./server/config/questionsdb.js');
 
