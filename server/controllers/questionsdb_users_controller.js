@@ -27,6 +27,7 @@ module.exports = {
 								res.json(fulluser)
 							})
 							.catch(
+								// this section will execute if the passwords fail
 								(error)=>{
 									res.json({errors: error})
 								}
