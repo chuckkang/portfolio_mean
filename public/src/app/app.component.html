@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div *ngIf="navSection=='index'">
+	<app-index></app-index>
+</div>
+
+<div *ngIf="navSection!='index'">
+	<app-topnav></app-topnav>
+	<div class="minheight">
+		<router-outlet></router-outlet>
+	</div>
+	<app-bottomnav></app-bottomnav>
+</div>

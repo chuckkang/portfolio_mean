@@ -38,7 +38,7 @@ module.exports = {
 				datajson = newQuestion
 				let getAll = new QuestionsDb();
 				getAll.getAllQuestionsWithUserData((results)=>{
-					console.log(results, "________________all questions")
+					//console.log(results, "________________all questions")
 					res.json(results)
 				})
 			}

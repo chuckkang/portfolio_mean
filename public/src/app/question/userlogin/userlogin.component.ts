@@ -13,8 +13,8 @@ export class UserloginComponent implements OnInit {
 	errMessage: String = '';
  
 	constructor(private _router: Router, private _api: QuestionsApiService, private _activatedRoute: ActivatedRoute){
-		this.email = 'chuck@chuck.com';
-		this.password = 'guest';
+		// this.email = 'chuck@chuck.com';
+		// this.password = 'guest';
 	 }
 
   ngOnInit() {

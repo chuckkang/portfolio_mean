@@ -40,13 +40,13 @@ export class ProfileComponent implements OnInit {
 	  }
 	
 	onSubmit(){
-		console.log(this.currentUser, "this user")
+		//console.log(this.currentUser, "this user")
 		this._api.updateProfile(this.currentUser, (isUpdated)=>{
 			if (isUpdated===true){
-				console.log('is UPdated')
+				//console.log('is UPdated')
 				this._router.navigate(['/questions/main'], { queryParams: {profile: true}})
 			} else if (isUpdated.errors){
-				console.log("is not updated")
+				//console.log("is not updated")
 				this.strMessage = this.displayMessage(0, isUpdated);
 			}
 		})

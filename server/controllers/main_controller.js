@@ -96,18 +96,28 @@ module.exports = {
 					newUser.username = req.body.username;
 					newUser.email = req.body.email;
 					newUser.sessiontime = new Date();
-					newUser.save((result) => {
-						User.findOne({id: newUser.id}, function(err, user) {
-							if (err){
-								//console.log(err, "error")
-								res.json({error: err})
+					// console.log(newUser._id)
+					newUser.save((err) => {
+							if (err) {
+								console.log(err, "this si the result")
 							} else {
-								req.session.username = newUser.username
-								req.session._id = newUser.id
-								req.session.user = newUser
-								res.json(user)
+								//console.log(newUser._id, "new user")
+								User.findOne({ _id: newUser._id }, function (err, user) {
+									if (err) {
+										//console.log(err, "error")
+										res.json({ error: err })
+									} else {
+
+										req.session.username = newUser.username
+										req.session._id = newUser.id
+										req.session.user = newUser
+										// newUser.id = user._id
+										//console.log(user, "user")
+										//console.log(newUser, "newUser")
+										res.json(user)
+									}
+								})
 							}
-						})
 					})
 				}
 			}

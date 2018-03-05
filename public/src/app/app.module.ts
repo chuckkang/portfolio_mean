@@ -29,7 +29,10 @@ import { ViewComponent } from './question/view/view.component';
 import { QuestionsnavbarComponent } from './question/questionsnavbar/questionsnavbar.component';
 import { ProfileComponent } from './question/profile/profile.component';
 import { UserComponent } from './question/user/user.component';
-import { TestComponent } from './question/test/test.component'
+import { TestComponent } from './question/test/test.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import { BottomnavComponent } from './bottomnav/bottomnav.component';
+import { TemplateComponent } from './template/template.component'
 
 
 @NgModule({
@@ -56,6 +59,9 @@ import { TestComponent } from './question/test/test.component'
 	ProfileComponent,
 	UserComponent,
 	TestComponent,
+	TopnavComponent,
+	BottomnavComponent,
+	TemplateComponent,
 
   ],
   imports: [

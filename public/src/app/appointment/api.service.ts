@@ -77,6 +77,7 @@ export class ApiService {
 	this._http.post("/login", user).subscribe(
 		(result)=> { 
 			var userjson = result.json(); // need to re-jsonify this because it has header information.
+			//console.log(result, "this is the result from the login")
 			this.setUser(userjson)
 			success(true)},
 		(error)=>{ console.log(error, "- There was an error logging in")}
@@ -109,6 +110,7 @@ export class ApiService {
   }
 
   setUser(userdata) {
+	  //console.log(userdata, "userdata")
 	  this.currentUser = new User("","","")
 	  this.currentUser.id = userdata.id
 	  this.currentUser.username = userdata.username

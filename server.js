@@ -4,6 +4,7 @@ var path = require("path");
 var bodyParser = require("body-parser");
 var aws = require('aws-sdk');
 var app = express();
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -33,7 +34,7 @@ require('./server/config/mongoose.js');
 var route = require("./server/config/routes.js")
 
 route(app);
-var routeNumber = 7000
+var routeNumber = 8000
 
 var server = app.listen(routeNumber, function () {
 	console.log("listening on port %s", routeNumber);

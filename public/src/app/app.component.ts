@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+	navSection='';
+	constructor(private _route: ActivatedRoute){
+
+  }
+
+	  ngOnInit(){
+		  if (!window.location.pathname || window.location.pathname==='/'){
+			this.navSection = 'index'
+		  } else {
+			this.navSection = 'application'
+		  }	
+	  }
+
 }

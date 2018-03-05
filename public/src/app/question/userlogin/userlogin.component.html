@@ -5,7 +5,7 @@
 			<div class="panel-body">
 				<div *ngIf='errMessage'><span class="text-danger">{{ errMessage }}</span></div>
 				<input type="text" class="input form-control" name="email" required [(ngModel)]='email' placeholder="Email Address">
-				<input type="text" class="input form-control" name="password" required [(ngModel)]='password' placeholder="Password">
+				<input type="password" class="input form-control" name="password" required [(ngModel)]='password' placeholder="Password">
 				<button class="input btn btn-info col-12">Login</button>
 				<button class="input btn btn-info col-12" (click)="register()">Register</button>
 			</div>

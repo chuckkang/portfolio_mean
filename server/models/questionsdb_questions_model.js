@@ -16,7 +16,7 @@ var QuestionSchema = new mongoose.Schema({
 
 QuestionSchema.methods.getAllQuestionsWithUserData = function(getQuestions){
 	// this will be just a gteneral method to return all questions with their user id.
-	Questions.find({}).populate('userId', ['firstname', 'lastname']).populate({ path: 'answers', populate: { path: 'userId', select: ['firstname', 'lastname'] } }).exec(
+	Questions.find({}).sort({createdAt: -1 }).populate('userId', ['firstname', 'lastname']).populate({ path: 'answers', populate: { path: 'userId', select: ['firstname', 'lastname'] } }).exec(
 		(err, result) => {
 			if (err) throw err;
 			//console.log(result)
