@@ -96,7 +96,7 @@ export class QuestionsApiService {
 		// console.log(userId, "userid in getUserDat api")
 		this._http.get("/qapp/user/${userId}").subscribe(
 			(userdata)=>{
-				console.log(userdata, "userdata in getUserData")
+				//console.log(userdata, "userdata in getUserData")
 				returnUser(userdata.json())
 			},
 			(errors)=>{

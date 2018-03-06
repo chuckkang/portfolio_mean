@@ -39,13 +39,13 @@ export class UserloginComponent implements OnInit {
 				//console.log(loginSuccess, "--userlogin -- Login sucess")
 				this._router.navigate(['/questions', 'main']);
 			} else if (loginSuccess.errors) {
-				console.log(loginSuccess, "THis is the return")
+				//console.log(loginSuccess, "THis is the return")
 				if (loginSuccess.errors.message == "invalid") {
 					// if loginSuccess.errors does not have a message,
 					// then the email and password was not found.
 					this.errMessage = "Email and password combination was not found.  Please try again or register for a new account."
 				} else {
-					console.log(loginSuccess.errors, "This is the error")
+					//console.log(loginSuccess.errors, "This is the error")
 					this.errMessage = loginSuccess.errors.message
 				}
 			}
